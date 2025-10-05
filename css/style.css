@@ -1,0 +1,78 @@
+/* * {
+  background-color: green;
+  border: 1px solid black;
+} */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto", Georgia, "Times New Roman", Times, serif;
+}
+
+p > span.lower-case {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+p {
+  /* font-size: 12px; */
+  /* font-size: 200%; */
+  font-size: 1em;
+  /* font-weight: light; */
+  font-weight: 800;
+  font-style: oblique;
+  text-transform: lowercase;
+  /* text-transform: uppercase;
+  text-transform: capitalize; */
+}
+
+p.white-text {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+.light-text {
+  color: gray;
+}
+
+#dark-text {
+  color: red;
+  /* line-height: 12px; */
+}
+
+div > abbr {
+  color: yellow;
+}
+
+div abbr {
+  color: pink;
+}
+
+div > p {
+  color: aqua;
+}
+
+/* pre+ol {
+  color: blue;
+} */
+
+p ~ ol {
+  color: magenta;
+}
+
+p {
+  /* color: blueviolet;
+  color: rgb(95, 23, 23);
+  color: rgba(95, 23, 23,0.5);
+  color: hsl(0, 58%, 25%); */
+  color: #808080;
+  /* color: hsla(0, 58%, 25%,0.5); */
+  background-color: aqua;
+}
