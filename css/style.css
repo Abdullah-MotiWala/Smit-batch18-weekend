@@ -3,17 +3,28 @@
   border: 1px solid black;
 } */
 
+/* * {
+  border: 1px solid black;
+  background-color: blue;
+} */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto";
+  /* background-color: black; */
 }
+/* 
+a {
+  text-decoration: none;
+  color: black;
+} */
 
 h1,
 h2,
 h3 {
-  font-family: "Roboto", Georgia, "Times New Roman", Times, serif;
+  font-family: Roboto, Georgia, "Times New Roman", Times, serif;
 }
 
-p > span.lower-case {
+/* p > i > b */
+p#p1 b {
   text-transform: uppercase;
   text-decoration: underline;
 }
@@ -23,7 +34,7 @@ p {
   font-size: 1em;
   /* font-weight: light; */
   font-weight: 800;
-  font-style: oblique;
+  font-style: italic;
   text-transform: lowercase;
   /* text-transform: uppercase;
   text-transform: capitalize; */
@@ -33,10 +44,10 @@ p.white-text {
   color: white;
 }
 
-a {
+/* a {
   text-decoration: none;
   color: red;
-}
+} */
 
 .light-text {
   color: gray;
@@ -44,7 +55,11 @@ a {
 
 #dark-text {
   color: red;
-  /* line-height: 12px; */
+  /* line-height: 4em; */
+  /* letter-spacing: 4em; */
+  /* word-spacing: 4em; */
+  /* text-align: right; */
+  text-align: justify;
 }
 
 div > abbr {
@@ -66,13 +81,58 @@ div > p {
 p ~ ol {
   color: magenta;
 }
+p {
+  /* color: blueviolet; */
+  /* color: rgb(255, 255, 255); */
+  /* color: rgba(95, 23, 23,1); */
+  /* color: hsl(0, 58%, 25%); */
+  /* color: hsla(0, 58%, 25%,0.5); */
+  color: #000;
+  background-color: aqua;
+}
 
 p {
-  /* color: blueviolet;
-  color: rgb(95, 23, 23);
-  color: rgba(95, 23, 23,0.5);
-  color: hsl(0, 58%, 25%); */
-  color: #808080;
-  /* color: hsla(0, 58%, 25%,0.5); */
-  background-color: aqua;
+  /* font-size: 32px; */
+  /* font-size: 200%; */
+  /* font-size: 200em; */
+  /* text-transform: uppercase; */
+  text-transform: lowercase;
+  /* text-transform: capitalize; */
+}
+
+p > span.lower-case {
+  text-transform: uppercase;
+}
+
+p#new-txt {
+  text-align: justify;
+  text-shadow: 1px 0px 0px yellow;
+  text-transform: lowercase;
+}
+p#new-txt::first-letter {
+  text-transform: uppercase;
+}
+p#new-txt:hover {
+  background-color: red;
+}
+
+a:visited {
+  color: red;
+}
+
+a:link {
+  color: green;
+}
+
+input:focus {
+  outline: none;
+  background-color: gray;
+  transform: scale(1.1);
+}
+
+button:active {
+  border-radius: 20px;
+}
+button:disabled {
+  background-color: yellow;
 }
