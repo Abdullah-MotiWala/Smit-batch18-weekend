@@ -103,15 +103,17 @@ p {
 p > span.lower-case {
   text-transform: uppercase;
 }
-
-p#new-txt {
-  text-align: justify;
-  text-shadow: 1px 0px 0px yellow;
-  text-transform: lowercase;
-}
 p#new-txt::first-letter {
   text-transform: uppercase;
 }
+
+p#new-txt {
+  text-align: justify;
+  text-shadow: 1px 1px 6px yellow;
+  text-transform: lowercase;
+  text-indent: 2rem;
+}
+
 p#new-txt:hover {
   background-color: red;
 }
@@ -135,4 +137,47 @@ button:active {
 }
 button:disabled {
   background-color: yellow;
+}
+
+/* ul.list-items > li:first-child {
+  color: orange;
+} */
+
+ul.list-items > li:nth-child(2) {
+  color: orange;
+}
+
+ul.list-items > li:nth-child(2) {
+  color: orange;
+}
+
+ul.list-items > li:nth-last-child(2) {
+  color: orange;
+}
+
+input[required] {
+  border: red 1px solid;
+}
+
+input[type="password"] {
+  border-radius: 2px;
+}
+
+input[class~="input"] {
+  background-color: blue;
+}
+
+input[type^="t"] {
+  background-color: yellow;
+}
+input[type*="ext"] {
+  background-color: orange;
+}
+
+input[type$="xt"]{
+  background-color: aqua;
+}
+
+.box {
+background-color: pink;
 }

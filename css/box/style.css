@@ -1,0 +1,85 @@
+.box {
+  /* overflow: auto; */
+  /* overflow-y: scroll; */
+  /* overflow-x: scroll; */
+  background-color: red;
+  color: blue;
+  min-height: 150px;
+  max-height: 200px;
+  max-width: 650px;
+  min-width: 350px;
+  /* width: 650px; */
+  /* height: 36px;
+    width: 36px; */
+  /* min-width: 70; */
+  /* width: 80em;
+  height: 5em; */
+  /* width: min-content; */
+}
+
+div.box-2 {
+  min-width: 450px;
+  max-width: 650px;
+
+  min-height: 450px;
+  max-height: 650px;
+
+  background-color: antiquewhite;
+  border-top: black 6px outset;
+  /* border-color: green;
+    border-width: 6px;
+    border-style: dotted; */
+
+  /* border-top-width: 2px;
+  border-top-color: blue;
+  border-top-style: dashed;
+
+  border-bottom-width: 2px;
+  border-bottom-color: blue;
+  border-bottom-style: dashed; */
+}
+
+div.digit {
+  height: 250px;
+  width: 250px;
+  /* border-color: black; */
+}
+/* Digit 2 */
+/* div.upper-box {
+    border-width: 4px;
+    border-style: solid;
+    border-left: none;
+}
+div.lower-box {
+    border-width: 4px;
+    border-style: solid;
+    border-right: none;
+    border-top: none;
+} */
+
+/* Digit 3 */
+/* .upper-box,
+.lower-box {
+  border-width: 4px;
+  border-style: solid;
+  border-left: none;
+}
+
+.lower-box {
+    border-top: none;
+} */
+
+/* Digit 4 */
+.upper-box {
+  border-width: 4px;
+  border-style: solid;
+  border-top: none;
+}
+.lower-box {
+  border-right-width: 4px;
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-right-style: solid;
+  /* border-left-color: white !important; */
+  border-left-color: transparent;
+}
