@@ -1,0 +1,18 @@
+body {
+  background-color: rgb(37, 36, 36);
+  padding: 0;
+  margin: 0 ;
+}
+
+.bulb {
+  width: 250px;
+  height: 350px;
+  /* border: 1px solid; */
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
+  margin-left: 40%;
+  box-shadow: 0 0 110px 30px #ffbf00;
+  background-color: #e9c350;
+}

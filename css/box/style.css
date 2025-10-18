@@ -83,3 +83,57 @@ div.lower-box {
   /* border-left-color: white !important; */
   border-left-color: transparent;
 }
+.text-trans {
+  text-transform: capitalize;
+  line-height: 40px;
+  vertical-align: top;
+  /* text-align: justify; */
+}
+.indent {
+  text-indent: -9999px;
+  background-color: #eeeeee;
+  color: blue;
+  text-shadow: -2px 0px 2px #000000;
+}
+
+a:link {
+  color: green;
+}
+a:visited {
+  color: red;
+}
+button:active {
+  color: aqua;
+}
+div {
+  height: 200px;
+  width: 200px;
+  background-color: aqua;
+  overflow-y: scroll;
+  border: 4px solid black;
+  box-shadow: 0px 10px 0px 10px inset red;
+  border-radius: 10px 20px;
+}
+.padding {
+  padding: 50px;
+}
+.margin {
+  margin: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline;
+  background-color: red;
+  /* width: 100px; */
+}
+span {
+  display: block;
+  background-color: aqua;
+  width: 100px;
+}
+.coming-soon {
+  visibility: hidden;
+}
