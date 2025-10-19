@@ -1,0 +1,43 @@
+div.parent {
+  height: 250px;
+  width: 250px;
+  background: red;
+  /* position: relative;*/
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  position: absolute;
+}
+
+div.grand-parent {
+  height: 450px;
+  width: 450px;
+  background: green;
+  margin-left: 350px;
+  /* position: absolute;
+  left: 150px; */
+}
+div.grand-grand-parent {
+  height: 650px;
+  width: 650px;
+  background: rgb(0, 19, 128);
+  margin-left: 150px;
+  position: static;
+  left: 150px;
+}
+
+div.parent {
+  background-color: antiquewhite;
+  width: 650px;
+  height: 650px;
+  position: relative;
+}
+
+div.child {
+  background-color: aqua;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 525px;
+  left: 525px;
+}
