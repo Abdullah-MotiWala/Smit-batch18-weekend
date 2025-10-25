@@ -41,3 +41,32 @@ div.child {
   top: 525px;
   left: 525px;
 }
+
+div.box {
+  height: 500px;
+  width: 500px;
+  border: 1px solid;
+}
+
+div.box-1 {
+  background-color: yellow;
+  height: 600px;
+  width: 600px;
+  top: 0px;
+  /* z-index: 4; */
+  /* margin-left: 120px; */
+  /* position: absolute; */
+  position: sticky;
+}
+div.box-2 {
+  background-color: blue;
+  z-index: 3;
+  position: relative;
+  /* position: absolute; */
+}
+
+div.box-3 {
+  background-color: green;
+  height: 550px;
+  width: 550px;
+}

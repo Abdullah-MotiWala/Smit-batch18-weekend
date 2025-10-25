@@ -1,0 +1,27 @@
+ul > li {
+  display: inline-block;
+  background-color: burlywood;
+  padding: 6px;
+}
+ul {
+  position: sticky;
+  padding: 6px;
+  background-color: beige;
+  top: 0px;
+  height: 36px;
+}
+div.box {
+  height: 5000px;
+  width: 5000px;
+  background-image: url("./cloudy-cloud-rain.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top right;
+  /* background-color: green; */
+  border: 1px solid;
+}
+
+marquee {
+    background: red;
+    color: white;
+}
