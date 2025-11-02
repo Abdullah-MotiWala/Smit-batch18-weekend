@@ -1,18 +1,59 @@
-.child {
+/* .child {
   background-color: blue;
   color: white;
   border: 2px solid black;
   width: 250px;
   text-align: center;
-  /* height: 150px; */
+  height: 150px;
 }
 
 .parent {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   height: 400px;
   background-color: yellow;
-  align-items: stretch;
-  /* justify-content: center; */
+  align-items: center;
   justify-content: space-evenly;
+}
+ */
+
+.parent {
+  background-color: yellow;
+  /* display: flex; */
+  /* height: 350px; */
+  min-height: 350px;
+  /* max-height: 500px; */
+  /* justify-content: center; */
+  /* justify-content: start; */
+  /* justify-content: space-evenly; */
+  /* justify-content: space-between; */
+  /* justify-content: right; */
+  /* justify-content: flex-start; */
+  /* align-items: start; */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column-reverse; */
+  align-items: center;
+  /* justify-content: space-between; */
+  justify-content: center;
+  flex-wrap: wrap;
+  /* width: 900px; */
+  width: 100vw;
+  height: 250px;
+  height: 100vh;
+  /* gap: 10px 100px; */
+  position: relative;
+}
+
+.child {
+  height: 50%;
+  width: 80%;
+  background-color: red;
+  /* border: 1px solid; */
+  /* width: calc(900px/6); */
+  /* height: 125px;
+  width: 150px; */
+}
+
+.child-1 {
+  /* align-self: flex-start; */
 }
