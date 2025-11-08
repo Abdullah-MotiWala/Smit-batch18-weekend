@@ -19,37 +19,39 @@
 
 .parent {
   background-color: yellow;
-  /* display: flex; */
-  /* height: 350px; */
-  min-height: 350px;
+  display: flex;
+  height: 350px;
+  /* min-height: 350px; */
   /* max-height: 500px; */
   /* justify-content: center; */
-  /* justify-content: start; */
+  justify-content: flex-start;
   /* justify-content: space-evenly; */
   /* justify-content: space-between; */
   /* justify-content: right; */
   /* justify-content: flex-start; */
   /* align-items: start; */
   /* flex-direction: row-reverse; */
-  /* flex-direction: column-reverse; */
-  align-items: center;
-  /* justify-content: space-between; */
-  justify-content: center;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  /* justify-content: center; */
   flex-wrap: wrap;
   /* width: 900px; */
-  width: 100vw;
+  /* width: 100vw;
   height: 250px;
-  height: 100vh;
+  height: 100vh; */
   /* gap: 10px 100px; */
-  position: relative;
+  /* position: relative; */
+  align-items: flex-start;
 }
 
 .child {
-  height: 50%;
-  width: 80%;
+  /* height: 50%; */
+  /* width: 80%; */
+  width: 150px;
+
   background-color: red;
-  /* border: 1px solid; */
-  /* width: calc(900px/6); */
+  border: 1px solid;
+  /* width: calc(((100vw - 16px) / 6) - 2px); */
   /* height: 125px;
   width: 150px; */
 }
