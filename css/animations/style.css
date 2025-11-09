@@ -1,0 +1,104 @@
+/* .wrapper {
+  height: 250px;
+  width: 250px;
+  animation-name: colorChange;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-iteration-count:infinite;
+  animation-direction: reverse;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in;
+  animation-play-state:paused
+}
+
+@keyframes colorChange {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: purple;
+  }
+} */
+
+.wrapper-2 {
+  width: 900px;
+  height: 900px;
+  border: 5px solid brown;
+  position: relative;
+}
+
+.child {
+  height: 80px;
+  width: 80px;
+  background-color: aqua;
+  position: absolute;
+  animation: position-movement 20s cubic-bezier(0.75, 0.75, 0.75, 1);
+}
+
+@keyframes position-movement {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  25% {
+    left: calc(100% - 80px);
+    top: 0;
+  }
+  50% {
+    top: calc(100% - 80px);
+    left: calc(100% - 80px);
+  }
+  75% {
+    left: 0;
+    top: calc(100% - 80px);
+  }
+
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+.shape-wrapper {
+  height: 250px;
+  width: 250px;
+  background-color: coral;
+  margin: 10rem;
+}
+
+.shape-wrapper:hover {
+  animation: shape 3s alternate infinite;
+
+}
+
+@keyframes shape {
+  0% {
+    background-color: coral;
+  }
+  25% {
+    transform: rotate(45deg);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 0%;
+    background-color: darksalmon;
+  }
+  50% {
+    transform: rotate(90deg);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 0%;
+    background-color: indianred;
+  }
+  75% {
+    transform: rotate(135deg);
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 0%;
+    background-color: lightcoral;
+  }
+  100% {
+    transform: rotate(180deg);
+    border-radius: 50%;
+    background-color: darksalmon;
+  }
+}
