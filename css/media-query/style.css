@@ -1,0 +1,28 @@
+.parent {
+  background-color: blue;
+  height: 250px;
+  width: 250px;
+}
+.hidden {
+  display: none;
+}
+@media print {
+  .parent {
+    background-color: yellow;
+  }
+  .hidden {
+    display: block;
+  }
+}
+
+/* @media (min-width: 500px) and (max-width: 1000px) {
+  .parent {
+    background-color: red;
+  }
+} */
+
+@media (width >= 500px) and (width <= 1000px) {
+  .parent {
+    background-color: red;
+  }
+}
