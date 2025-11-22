@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #f26430;
+  --secondary-color: #0e7c7b;
+  --tertiary-color: #d1d5de;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Start */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 6px 12px;
+  margin: 0;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  color: var(--tertiary-color);
+  width: 60%;
+  letter-spacing: 1.5px;
+  padding-bottom: 4px;
+  cursor: pointer;
+}
+
+nav > ul > li {
+  transition: transform 500ms, border 500ms;
+  border-bottom: 2px solid transparent;
+}
+
+nav > ul > li:hover {
+  border-bottom-color: var(--tertiary-color);
+  transform: scale(1.1);
+}
+
+nav > div.logo {
+  height: 60px;
+  width: 60px;
+}
+
+nav > div.logo > img {
+  height: 100%;
+  width: 100%;
+}
+
+nav > div.book-now > button {
+  border: none;
+  height: 40px;
+  width: 160px;
+  font-size: 18px;
+  border-radius: 4px;
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+nav > div.book-now > button:active {
+  transform: scale(0.9);
+}
+
+nav > div.book-now > button:hover {
+  border: 1px solid var(--secondary-color);
+}
+
+/* Navbar End */
+
+/* Hero Section Start */
+div.banner {
+  width: 100vw;
+}
+
+div.banner > img {
+  width: 100%;
+}
+
+/* Hero Section End */
+
+/* Search Start */
+
+.search-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.search-bar {
+  display: flex;
+  margin: 0;
+  margin-top: 4px;
+  width: 60%;
+  border: 1px solid var(--primary-color);
+  padding: 4px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.search-bar > div.arrow-icon {
+  height: 20px;
+  width: 20px;
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  padding: 4px;
+  transform: rotate(180deg);
+}
+
+.search-bar > div.arrow-icon > img {
+  height: 100%;
+  width: 100%;
+}
+
+.search-bar > input {
+  width: 97%;
+  outline: none;
+  border: none;
+  color: var(--primary-color);
+}
+
+.search-bar > input::placeholder {
+  color: var(--primary-color);
+}
+.search-bar > .arrow-icon {
+  width: 3%;
+}
+
+/* Search End */
+/* Body Card Start */
+
+.body {
+  margin: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.body > .loading-card,
+.body .card {
+  width: 250px;
+  height: 270px;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.body > .card {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: transform 1s, box-shadow 1s;
+  cursor: pointer;
+  box-shadow: inset 0px 3.5em 10px 0px var(--tertiary-color);
+}
+
+.body > .card > .title {
+  align-self: flex-start;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin-left: 6px;
+}
+
+.body > .card > .rate {
+  align-self: flex-end;
+  font-size: 14px;
+  border-radius: 6px;
+  padding: 4px;
+  margin-right: 4px;
+  box-shadow: 0px 0px 6px 2px var(--tertiary-color);
+}
+
+.body > .card:hover {
+  transform: scale(1.1);
+  box-shadow: none;
+}
+
+.body > .card ins {
+  text-decoration: none;
+}
+
+.body > .card > .item > img {
+  width: 160px;
+}
+.animation-ball {
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+  background-color: var(--primary-color);
+  position: absolute;
+  animation: jumping-ball 2s infinite alternate;
+}
+
+@keyframes jumping-ball {
+  from {
+    bottom: 4px;
+  }
+  to {
+    bottom: calc(260px - 12px - 4px);
+  }
+}
+
+/* Body Card End */
+
+@media screen and (max-width: 600px) {
+  .book-now {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+  nav ul {
+    width: 100%;
+  }
+}
