@@ -16,6 +16,9 @@ var MY_FIRST_NAME = 25; //screaming snake case
 
 // Primitive
 var firstName = "Abdullah"; //string
+fristName = "Motiwala";
+
+var firstName = "Mohd. Abdullah";
 var firstName = `myFirstName`; //string
 var isMarried = true; // boolean e.g true/false
 var childrenCount = 4; //number
@@ -86,7 +89,15 @@ const closedConst = 3.14;
 // const closedConst = 3.15 // illegal
 // closedConst = 3.15 // illegal
 
-let age = 22;
+let age = 23;
+// age = age +1
+// age += 1
+
+age++;
+++age;
+
+age--;
+--age;
 // age = age + 1;
 // age = age + 1;
 // age += 1;
@@ -140,4 +151,190 @@ const passingPer = 70;
 // } else {
 //     alert("You're failed")
 // }
-if(result>passingPer) alert("You're passed")
+// if (result > passingPer) alert("You're passed");
+
+// const onReception = prompt("Is There anyone on reception")
+// // true === "true"
+// // 1== "1"
+// // 1 === "1"
+// if(onReception === true) {
+//     alert("Please bring the water")
+// } else  {
+//     alert("Come back!")
+// }
+
+// let myAge = 24;
+// myAge = 25;
+
+// let myAge = 25;
+
+// const dob = "12-05-2002";
+// > >= >= GreaterThan
+// < <= <= LesserThan
+// == === EqualTo
+
+let qadriAge = 13;
+let qadriAge2 = "13";
+console.log(qadriAge == qadriAge2);
+console.log(qadriAge === qadriAge2);
+// if (qadriAge = 15) {
+//   alert("Success");
+// }
+// console.log(qadriAge)
+// if(true){alert("asdf")}
+
+// const currentValue = 10
+// if(currentValue >= 10)
+
+// const value = parseFloat("25.01")
+// // console.log(value)
+// const value = Number(prompt("Enter Your Age!"));
+// // isNaN()
+// console.log(typeof value, isNaN(value), value);
+// console.log(typeof 25,"type")
+
+// let value = prompt("Enter your age!");
+// value = Number(value);
+
+// console.log(typeof value, isNaN(value))
+
+// if (typeof value === "number") {
+//   alert("You've entered correct value");
+// } else {
+//   alert("You've entered wrong value");
+// }
+
+// const dob = 2025 - value;
+// alert("Your birth year is " + dob);
+
+// const salesTarget = 2000;
+// const userSales = +prompt("Enter your this month sales");
+// console.log(salesTarget >= userSales)
+// if (userSales >= salesTarget) {
+//   alert("Promotion");
+// } else {
+//   alert("Fired!");
+// }
+
+// if (userSales === salesTarget) alert("Salary Released");
+// else if (userSales > salesTarget) alert("Bonus");
+// else alert("Fired");
+
+const isGuilty = true;
+const prisonerAge = 18;
+const isOfficial = false;
+
+// if (isGuilty === true) {
+//   if (isOfficial === false) {
+//     if (prisonerAge < 18) {
+//       alert("Send her to centeral jail");
+//     } else {
+//       alert("Send him to adaila jail");
+//     }
+//   } else {
+//     alert("Be Izzat Bari");
+//   }
+// } else {
+//   alert("Ba Izzat Bari");
+// }
+
+if (isGuilty === true && isOfficial === false) {
+  if (prisonerAge < 18) {
+    alert("Send him to children jail");
+  } else {
+  }
+} else {
+  alert("Riha");
+}
+
+const userAge = 22;
+const hasCar = true;
+const hasJob = true;
+const height = 6.1;
+const hasHome = false;
+const istikhara = true;
+// if (
+//   userAge > 18 &&
+//   hasCar === true &&
+//   hasJob === true &&
+//   height > 6 &&
+//   hasHome
+// ) {
+//   if (istikhara === false) {
+//     alert("Dil ki suno");
+//   } else {
+//     alert("Istikhire me han");
+//   }
+// } else {
+//   alert("Istikhare me na aya");
+// }
+
+const doesKnowCooking = true;
+const isBeautiful = false;
+const isForeign = false;
+
+if (doesKnowCooking || isBeautiful || isForeign) {
+  console.log("Success");
+}
+
+// const isClassGoingOn = true;
+// const condition = isClassGoingOn === true
+// // NOT
+// if (!isClassGoingOn) {
+//   alert("Don't Disturb");
+// }
+
+// const isMarried = false;
+// if (!isMarried) {
+//   alert("Let's marry");
+// }
+
+// const carBudget = true;
+// const money = 500001;
+// if (money !== 500000) {
+//   alert("cultus 2005");
+// } else {
+//   alert("you have to increase your budget");
+// }
+
+// const isFeesSubmitted = false;
+// if (isFeesSubmitted) {
+//   alert("Please submit your fees");
+// }
+
+let user1 = "Umer";
+// let user2 = "Ibrahim";
+// let user3 = "Farooq";
+// let user4 = "Ali";
+// let user5 = "Bilawal";
+
+// let users = [
+//   "Ume,r",
+//   "Ibrahim",
+//   "Farooq",
+//   "Ali",
+//   "Bilawal",
+//   25,
+//   // ["Index0", "Index1"],
+//   // {},
+//   false,
+//   undefined,
+//   null,
+//   user1,
+// ];
+// console.log(users[2],users[6][1]);
+
+// const userage = 24;
+// userage.toString();
+
+// const fruits = ["Mango", "Banana", "Apple", "Orange"];
+// let abc = fruits.push("Watermelon");
+// let firstFruit = fruits.shift();
+// let fruitBasketLength = fruits.unshift("Guava");
+// fruits.pop()
+
+// console.log(fruits, firstFruit,fruitBasketLength);
+
+
+
+
