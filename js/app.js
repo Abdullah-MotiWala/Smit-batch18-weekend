@@ -334,7 +334,63 @@ let user1 = "Umer";
 // fruits.pop()
 
 // console.log(fruits, firstFruit,fruitBasketLength);
+const classes = 2;
+const classesInString = classes.toString();
 
+console.log(classes, classesInString);
 
+const students = ["Ahmed", "Ali", "Samad"];
+const updatedLenght = students.push("Rauf", "Haider");
+students.unshift("Ghafoor");
 
+// students.shift()
+// students.pop()
+// students.splice(1,2,"Bashir")
+// students.splice(1,0,"Bashir")
+// students.splice(0, 0, "Farooq", "Usman", 5, updatedLenght);
+const studentsCopy = students.slice(0, 4);
+console.log(studentsCopy, students);
 
+// console.log(students);
+
+// for (let start = 26; start <= 30; start = start + 2) {
+
+// }
+
+// for (let i = 1; i <= 10; i++) {
+//   const tableNumber = 14
+//   console.log(tableNumber +" X " + i + " = ", i * tableNumber);
+// }
+// let one = 1;
+// console.log("2 X 2 = ", 2 * 2);
+// console.log("2 X 3 = ", 3 * 2);
+// console.log("2 X 4 = ", 4 * 2);
+// console.log("2 X 5 = ", 5 * 2);
+// console.log("2 X 6 = ", 6 * 2);
+// console.log("2 X 7 = ", 7 * 2);
+// console.log("2 X 8 = ", 8 * 2);
+// console.log("2 X 9 = ", 9 * 2);
+// console.log("2 X 10 = ", 10 * 2);
+const chaiTypes = [
+  "masala",
+  "doodh pati",
+  "kashmiri",
+  "cut", 
+  "Kahwa",
+  "Karak",
+  "chainak",
+  "Gur wali",
+];
+// const oneIndexValue = chaiTypes[1];
+// console.log(oneIndexValue);
+for (let i = 0; i < 8; i++) {
+  const chai = chaiTypes[i];
+  console.log(chai);
+  debugger;
+  if (chai === "cut") {
+    alert("1 cut ustaad");
+    // break;
+    continue;
+  }
+  alert("Ustadd Cut hai kya?")
+}
