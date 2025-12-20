@@ -371,26 +371,156 @@ console.log(studentsCopy, students);
 // console.log("2 X 8 = ", 8 * 2);
 // console.log("2 X 9 = ", 9 * 2);
 // console.log("2 X 10 = ", 10 * 2);
-const chaiTypes = [
-  "masala",
-  "doodh pati",
-  "kashmiri",
-  "cut", 
-  "Kahwa",
-  "Karak",
-  "chainak",
-  "Gur wali",
-];
+// const chaiTypes = [
+//   "masala",
+//   "doodh pati",
+//   "kashmiri",
+//   "cut",
+//   "Kahwa",
+//   "Karak",
+//   "chainak",
+//   "Gur wali",
+// ];
 // const oneIndexValue = chaiTypes[1];
 // console.log(oneIndexValue);
-for (let i = 0; i < 8; i++) {
-  const chai = chaiTypes[i];
-  console.log(chai);
-  debugger;
-  if (chai === "cut") {
-    alert("1 cut ustaad");
-    // break;
-    continue;
+// for (let i = 0; i < 8; i++) {
+//   const chai = chaiTypes[i];
+//   console.log(chai);
+//   debugger;
+//   if (chai === "cut") {
+//     alert("1 cut ustaad");
+//     // break;
+//     continue;
+//   }
+//   alert("Ustadd Cut hai kya?")
+// }
+
+const studentsName = ["abdullah", "talha", "uzair", "shahzaib"];
+// studentsName.splice(1, 1, "sarib");
+// const newList = studentsName.slice(1, 4);
+// console.log(studentsName, newList);
+
+// for (let i = 0; i <= 10; i++) {
+//   const listName = studentsName[i];
+//   debugger;
+//   if (listName === "uzair") {
+//     alert("we find uzair");
+//     continue;
+//   }
+//   alert("did you find uzair");
+// }
+const rowStudents = [
+  "wajeeh",
+  "fardeen",
+  "mazhar",
+  "kaleem",
+  "kabir",
+  "talha",
+  "abdullah",
+  "zohaib",
+];
+// for (let i = 0; i < 6; i++) {
+//   // const currentRow = i + 1;
+//   const userV
+//   console.log(currentRow, "row wala bande ko uthao");
+//   if (currentRow === 3) {
+//     alert("skip");
+//     continue;
+//   }
+//   alert("slap");
+// }
+
+// for (let i = 0; i < rowStudents.length; i++) {
+//   const userName = rowStudents[i];
+//   if (userName === "mazhar") {
+//     continue;
+//   }
+//   console.log(userName, "khara hoja");
+// }
+// let ageNumber = 20;
+// let hardwork = 1;
+// let isSucceed = false;
+// while (!isSucceed) {
+//   ageNumber++;
+//   hardwork++;
+//   if (condition) continue;
+//   console.log("keep growing and working hard");
+//   if (ageNumber > 35 || hardwork > 15) isSucceed = true;
+// }
+console.clear();
+// const homeDistance = 18
+// let busDistanceCovered = 0
+// // console.log(++busDistanceCovered,"first")
+// // console.log(busDistanceCovered,"second")
+// while (busDistanceCovered < homeDistance) {
+//   alert("Conductor: Landhi, Korangi...");
+//   ++busDistanceCovered
+//
+// let userInput = 0
+// do {
+//   let userInput = Number(prompt("Enter Your Age"));
+//   if (isNaN(userInput)) alert("You Entered the wrong input");
+// } while (isNaN(userInput));
+// const winnerNumber = 66;
+
+// let userRandomNumber = 0;
+
+// do {
+//   userRandomNumber = Number(prompt("Guess a number"));
+//   console.log("Loop Running", userRandomNumber);
+// } while (userRandomNumber != winnerNumber);
+
+// const studentName = ["ali", "basit", "uzair"];
+// for (let i = studentName.length - 1; i >= 0; i--) {
+//   console.log(studentName[i]);
+//   if (studentName[i] === "basit") {
+//     continue;
+//   }
+//   console.log(studentName[i], "card check kro");
+// }
+// studentName.push("huzaifa");
+
+// let acButtonNumber = null;
+
+const masjidButton = ["f", "l", "f", "ac", "b", "f", "m"];
+const n = masjidButton.length;
+let buttonFound = false;
+// (0)n
+for (let i = 0; i < masjidButton.length; i++) {
+  const button = masjidButton[i];
+  if (button === "ac") {
+    buttonFound = true;
+    const difBetweenIndexAndNumber = 1;
+    acButtonNumber = i + difBetweenIndexAndNumber;
+    break;
   }
-  alert("Ustadd Cut hai kya?")
 }
+
+// console.log(acButtonNumber);
+// const floor = [ // n = 4
+//   ["floor-1 flat-1", "floor-1 flat-2"], //m=4
+//   ["floor-2 flat-1", "floor-2 flat-2"],
+//   ["floor-3 flat-1", "floor-3 flat-2"],
+//   ["floor-4 flat-1", "floor-4 flat-2"],
+// ];
+// (O)mn ()n^2
+// for (let i = 0; i < floor.length; i++) {
+//   const floorNumber = floor[i];
+//   // console.log(floorNumber, "I loop start");
+//   for (let j = 0; j < floorNumber.length; j++) {
+//     const flat = floorNumber[j];
+//     console.log(floorNumber, flat);
+//   }
+//   // console.log(i, "I loop end");
+// }
+
+// let flag = true;
+// const studentsInClass = [];
+// while (flag) {
+//   const studentId = Math.random()
+//   studentsInClass.push(studentId)
+//   if (studentsInClass.length === 100) flag = false;
+//   debugger;
+// }
+let flag = false;
+do {console.log("isRunning")} while (flag);
