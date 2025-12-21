@@ -7,23 +7,23 @@
 // var myName = "a"
 // var myname = "a"
 
-var myFirstName = 25; //camel case
-var MyFirstName = 25; //Pascal case
-var my_first_name = 25; //snake case
-var MY_FIRST_NAME = 25; //screaming snake case
+// var myFirstName = 25; //camel case
+// var MyFirstName = 25; //Pascal case
+// var my_first_name = 25; //snake case
+// var MY_FIRST_NAME = 25; //screaming snake case
 
 // Data Types
 
 // Primitive
-var firstName = "Abdullah"; //string
-fristName = "Motiwala";
+// var firstName = "Abdullah"; //string
+// fristName = "Motiwala";
 
-var firstName = "Mohd. Abdullah";
-var firstName = `myFirstName`; //string
-var isMarried = true; // boolean e.g true/false
-var childrenCount = 4; //number
-var hasPowred = null; //null
-var reason = undefined; //undefined
+// var firstName = "Mohd. Abdullah";
+// var firstName = `myFirstName`; //string
+// var isMarried = true; // boolean e.g true/false
+// var childrenCount = 4; //number
+// var hasPowred = null; //null
+// var reason = undefined; //undefined
 
 // Non Primitive
 // [], {}
@@ -492,21 +492,21 @@ for (let i = 0; i < masjidButton.length; i++) {
     buttonFound = true;
     const difBetweenIndexAndNumber = 1;
     acButtonNumber = i + difBetweenIndexAndNumber;
-    break;
+    // con;
   }
 }
 
 // console.log(acButtonNumber);
-// const floor = [ // n = 4
-//   ["floor-1 flat-1", "floor-1 flat-2"], //m=4
-//   ["floor-2 flat-1", "floor-2 flat-2"],
-//   ["floor-3 flat-1", "floor-3 flat-2"],
-//   ["floor-4 flat-1", "floor-4 flat-2"],
-// ];
+const floor = [
+  // n = 4
+  ["floor-1 flat-1", "floor-1 flat-2"], //m=4
+  ["floor-2 flat-1", "floor-2 flat-2"],
+  ["floor-3 flat-1", "floor-3 flat-2"],
+  ["floor-4 flat-1", "floor-4 flat-2"],
+];
 // (O)mn ()n^2
 // for (let i = 0; i < floor.length; i++) {
 //   const floorNumber = floor[i];
-//   // console.log(floorNumber, "I loop start");
 //   for (let j = 0; j < floorNumber.length; j++) {
 //     const flat = floorNumber[j];
 //     console.log(floorNumber, flat);
@@ -522,5 +522,70 @@ for (let i = 0; i < masjidButton.length; i++) {
 //   if (studentsInClass.length === 100) flag = false;
 //   debugger;
 // }
-let flag = false;
-do {console.log("isRunning")} while (flag);
+// let flag = false;
+// do {console.log("isRunning")} while (flag);
+
+// // 21-12-25
+
+const firstName = ["ali", "uzair", "usman", "bilal"];
+const lastName = ["haider", "baloch", "ashraf", "jabbar"];
+
+// const fullName = [];
+// for (let i = 0; i < firstName.length; i++) {
+//   for (let j = 0; j < lastName.length; j++) {
+//     fullName.push(firstName[i] + lastName[j]);
+//   }
+// }
+// console.log(fullName);
+// console.time("User Detail")
+// const userInput = prompt("Are you married?").toLowerCase();
+// const userLowerInput = userInput.toLowerCase();
+// const userUpperInput = userInput.toUpperCase();
+// console.log(userInput, userLowerInput);
+// if (userLowerInput === "yes") {
+//   alert("You're married");
+// }
+// console.timeEnd("User Detail")
+
+// const city = "Karrachi";
+// console.log(city.indexOf("pani"))
+// console.log(city.lastIndexOf("a"))
+// console.log(city[3])
+// console.log(city.charAt(1))
+// const cityShort = city.slice(0, 3);
+// console.log(city, cityShort);
+// console.log(city.length)
+// for (let i = 0; i < city.length; i++) {
+//   console.log(city[i]);
+// }
+
+// const userInput = prompt("Enter Your Name");
+// console.log(userInput, userInput.charAt(userInput.length -1));
+
+let text =
+  "world war II changed history in many countries, and many nations were involved during world war II. People remember world war II for its global impact, as technology advanced rapidly because of world war II. Families were deeply affected by world war II, and lessons were learned from the events of world war II. Books and films often focus on world war II, and today, students still study world war II in school.";
+
+// for (let i = 0; i < text.length; i++) {
+//   const targetWord = "world war II";
+//   const newWord = "Second World War";
+//   const targetWordLenght = targetWord.length;
+
+//   const startIndexOfTargetElement = text.indexOf(targetWord);
+
+//   const endIndexOfTargetElement =
+//     startIndexOfTargetElement + targetWordLenght - 1;
+
+//   if (startIndexOfTargetElement != -1) {
+//     const earlierPart = text.slice(0, startIndexOfTargetElement);
+
+//     const afterPart = text.slice(endIndexOfTargetElement + 1);
+
+//     text = earlierPart + newWord + afterPart;
+//     // debugger;
+//   }
+
+//   // debugger;
+// }
+// text = text.replace("world war II","second world war")
+text = text.replaceAll("world war II","second world war")
+console.log(text);
