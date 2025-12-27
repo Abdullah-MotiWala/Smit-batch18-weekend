@@ -587,5 +587,87 @@ let text =
 //   // debugger;
 // }
 // text = text.replace("world war II","second world war")
-text = text.replaceAll("world war II","second world war")
+text = text.replaceAll("world war II", "second world war");
 console.log(text);
+
+let stringText = "a b c a";
+let stringArray = stringText.split(" ");
+let stringArrayJoined = stringArray.join("");
+stringText = stringText.toUpperCase();
+const stringLenght = stringText.length;
+const newString = stringText.slice(0, 2);
+// const aIndex = stringText.indexOf("A");
+const aIndex = stringText.lastIndexOf("A");
+// const replacedString = stringText.replace(/A/g, "b");
+
+console.log(aIndex, stringText, stringLenght, newString);
+
+// const alphabets = "ABCDA";
+// let totalCounts = 0;
+// for (let i = 0; i < alphabets.length; i++) {
+//   const alphabet = alphabets.charAt(i);
+//   if (alphabet === "A") {
+//     // indexNumber = i;
+//     totalCounts++;
+//     // debugger;
+//     // break;
+//   }
+// }
+
+// console.log(totalCounts);
+// console.log(stringArray, stringArrayJoined);
+
+// let ourString = "abcdefgh" + "ijk";
+// const ourNewString = "lmno";
+// const ourNewString1 = "pqrs";
+// ourString = ourString.concat(ourNewString, ourNewString1);
+// const ourRegex = /[b-z]/g;
+// console.log(
+//   ourString,
+//   ourString.at(-1),
+//   ourString.endsWith("rs"),
+//   ourString.includes("cdefgh"),
+//   ourString.match(ourRegex),
+//   ourString.matchAll(ourRegex)
+// );
+// let newNumber = "10."
+// console.log(newNumber.padEnd(5,"123"), "Sorry".repeat(100))
+// const untrimmedString = "  a b c   "
+// console.log(untrimmedString.trimEnd())
+
+// let newNumber = 123456
+
+// newNumber= newNumber.toString()
+// console.log(newNumber)
+
+// SHOP COUNTER
+// const userBill = +prompt("Enter your bill");
+// const userPayment = +prompt("Please Pay the bill");
+// // const userRoundBill = Math.ceil(userBill);
+// const userRoundBill = Math.floor(userBill);
+
+// let remainings = userPayment - userRoundBill;
+
+// if (remainings > 0) alert("Your remainings are " + remainings.toFixed(2));
+// const gameElements = ["rock","paper","scissor"]
+// const randomNumber = Math.random()
+// const currentIndex = Math.floor(randomNumber * 3)
+// const gameElement = gameElements[currentIndex]
+// console.log(gameElement)
+
+// console.log(Number.MAX_VALUE,Number.MIN_VALUE)
+const keyVariable = "name";
+const ourObject = {
+  name: "Abdullah",
+  role: "Instructor",
+  salary: "---",
+  dob: "11-08-2002",
+  experience: "Bahut Zyaada",
+  cast: "Memon",
+};
+ourObject.name = "Abdullah Motiwala";
+ourObject.age = 24
+delete ourObject.cast
+
+// update + insert = upsert
+console.log(ourObject, ourObject[name]);
