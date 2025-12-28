@@ -656,18 +656,102 @@ console.log(aIndex, stringText, stringLenght, newString);
 // console.log(gameElement)
 
 // console.log(Number.MAX_VALUE,Number.MIN_VALUE)
-const keyVariable = "name";
-const ourObject = {
-  name: "Abdullah",
-  role: "Instructor",
-  salary: "---",
-  dob: "11-08-2002",
-  experience: "Bahut Zyaada",
-  cast: "Memon",
-};
-ourObject.name = "Abdullah Motiwala";
-ourObject.age = 24
-delete ourObject.cast
+// const keyVariable = "name";
+// const ourObject = {
+//   name: "Abdullah",
+//   role: "Instructor",
+//   salary: "---",
+//   dob: "11-08-2002",
+//   experience: "Bahut Zyaada",
+//   cast: "Memon",
+// };
+// ourObject.name = "Abdullah Motiwala";
+// ourObject.age = 24;
+// delete ourObject.cast;
 
 // update + insert = upsert
-console.log(ourObject, ourObject[name]);
+
+// console.log(ourObject, ourObject[name]);
+const randomNumber = Math.random();
+const fixed = randomNumber.toFixed(4);
+console.log(fixed);
+
+const headOfc = {
+  floor: 4,
+  isItDepartment: true,
+  manager: "Mr. Ihtisan",
+};
+
+headOfc.floor = 6;
+headOfc.instructorCount = 3;
+delete headOfc.isItDepartment;
+
+// update + insert = upsert
+
+console.log(headOfc, headOfc.manager);
+
+const objectA = {
+  name: "Ali",
+  fname: "Mohd",
+  age: 25,
+  children: ["Ahsan", "Zaid", "Ghafoor"],
+  job: {
+    salary: 50000,
+    timings: "9-5",
+  },
+};
+// Shallow Copy
+// const objectB = objectA
+
+// Deep Copy
+// const objectB = {};
+// objectB.name = objectA.name;
+// objectB.fname = objectA.fname;
+// objectB.age = objectA.age;
+// objectB.children = objectA.children;
+// objectB.job = objectA.job;
+
+// objectB.name = "Karim";
+// objectB.children.push("Usman");
+// objectB.job.salary = 70000;
+// objectB.age = 27;
+// console.log(objectA, objectB);
+
+console.clear();
+// const rightNow = new Date();
+// const date = rightNow.getDate();
+// const day = rightNow.getDay();
+// const month = rightNow.getMonth();
+// const year = rightNow.getFullYear();
+// const hour = rightNow.getHours();
+// const mins = rightNow.getMinutes();
+// const sec = rightNow.getSeconds();
+// const miliSecs = rightNow.getMilliseconds();
+// const time = rightNow.getTime();
+// // console.log(rightNow,rightNow.toString());
+// console.log(date, month, year, hour, mins, sec, miliSecs, day, time, "===date");
+// const uniqueId = time + "_" + Math.random()
+// console.log(uniqueId)
+
+// const dob = prompt("Please enter your dob");
+// const userDOBDate = new Date(dob);
+// const currentDate = new Date();
+
+// const userAgeTime = userDOBDate.getTime();
+// const currentDateTime = currentDate.getTime();
+
+// const ageInMs = currentDateTime - userAgeTime;
+// const userCalculatedAge = Math.floor(ageInMs / 1000 / 60 / 60 / 24 / 365);
+// alert(userCalculatedAge);
+
+function myFoo(userName) {
+  // if ("conditions") {
+  //   var a = 1;
+  // }
+  console.log(a);
+  alert("Hello " + userName + ", Nice Pic");
+}
+
+// invoke/call
+myFoo("Uzair");
+myFoo("Rehman");
