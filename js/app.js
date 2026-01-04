@@ -54,12 +54,12 @@ console.log(d, e, "==answer");
 // BODMAS | Bracket Open, Divide, Multiply, Addition, Substraction
 var g = (2 * 9) / (5 * 8 + 8) - 8 + 9;
 
-var BO1 = 18;
-var BO2 = 48;
-var division = BO1 / BO2;
-console.log(division, "===div");
-var addition = 1;
-var substraction = division + addition;
+// var BO1 = 18;
+// var BO2 = 48;
+// var division = BO1 / BO2;
+// console.log(division, "===div");
+// var addition = 1;
+// var substraction = division + addition;
 // var result = substraction;
 // console.log(result, g);
 
@@ -753,5 +753,120 @@ function myFoo(userName) {
 }
 
 // invoke/call
-myFoo("Uzair");
-myFoo("Rehman");
+// myFoo("Uzair");
+// myFoo("Rehman");
+
+// Function is a block of code
+// Definition
+function greet(userName, userAge) {
+  // const userName2 = "Abc";
+  // debugger;
+  // console.log(userName);
+  // alert("Welcome ");
+}
+
+// invoke /call
+greet("Wasif");
+greet(25);
+greet("Abdullah");
+
+// passing reference
+// const newGreet = greet;
+// console.log(newGreet);
+console.log("abc", "def");
+
+// function sum(value1, value2) {
+//   let value = 1;
+//   value++;
+//   console.log(value);
+//   // return finalValue;
+// }
+// const result1 = sum();
+// sum();
+
+// console.log(result1);
+
+function addition(value1, value2) {
+  const result = value1 + value2;
+  return result;
+}
+
+function substraction(value1, value2) {
+  const result = value1 - value2;
+  return result;
+}
+
+function division(value1, value2) {
+  const result = value1 / value2;
+  return result;
+}
+
+function multiplicate(value1, value2) {
+  const result = value1 * value2;
+  return result;
+}
+
+// function sum(value1, value2, operator) {
+//   if (operator === "+") return addition(value1, value2);
+//   if (operator === "-") return substraction(value1, value2);
+//   if (operator === "/") return division(value1, value2);
+//   if (operator === "*") return multiplicate(value1, value2);
+
+//   alert("Invalid Operator");
+// }
+// function sum(value1, value2, operator) {
+//   let result = null;
+//   if (operator === "+") {
+//     result = addition(value1, value2);
+//   }
+//   if (operator === "-") {
+//     result = substraction(value1, value2);
+//   }
+//   if (operator === "/") {
+//     result = division(value1, value2);
+//   }
+//   if (operator === "*") {
+//     result = multiplicate(value1, value2);
+//   }
+
+//   if(result === null) {
+//     alert("Invalid Operator");
+//     return;
+//   }
+//   return result;
+// }
+
+// const sumResult = sum(10, 12, "*");
+// console.log(sumResult);
+
+// // function-scope
+// var
+
+// // block-scope
+// let
+// const
+// let a = 123
+// function myFoo2() {
+//   let fooVar = 123;
+
+//   if (true) {
+//     console.log(fooVar,"abc");
+//   }
+// }
+// console.log(fooVar)
+// myFoo2()
+
+function myFoo2() {
+  let a = 1;
+  let b = 2;
+
+  function myFoo3() {
+    let c = 3;
+    debugger;
+  }
+  debugger;
+  myFoo3();
+  debugger;
+}
+
+myFoo2();
