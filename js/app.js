@@ -759,6 +759,7 @@ function myFoo(userName) {
 // Function is a block of code
 // Definition
 function greet(userName, userAge) {
+  alert("===cal");
   // const userName2 = "Abc";
   // debugger;
   // console.log(userName);
@@ -766,9 +767,9 @@ function greet(userName, userAge) {
 }
 
 // invoke /call
-greet("Wasif");
-greet(25);
-greet("Abdullah");
+// greet("Wasif");
+// greet(25);
+// greet("Abdullah");
 
 // passing reference
 // const newGreet = greet;
@@ -816,6 +817,7 @@ function multiplicate(value1, value2) {
 // }
 // function sum(value1, value2, operator) {
 //   let result = null;
+//   // return null;
 //   if (operator === "+") {
 //     result = addition(value1, value2);
 //   }
@@ -856,17 +858,62 @@ function multiplicate(value1, value2) {
 // console.log(fooVar)
 // myFoo2()
 
-function myFoo2() {
-  let a = 1;
-  let b = 2;
+// function myFoo2() {
+//   let a = 1;
+//   let b = 2;
 
-  function myFoo3() {
-    let c = 3;
-    debugger;
-  }
-  debugger;
-  myFoo3();
-  debugger;
+//   function myFoo3() {
+//     let c = 3;
+//     debugger;
+//   }
+//   debugger;
+//   myFoo3();
+//   debugger;
+// }
+
+// myFoo2();
+alert("abc");
+
+function newGreet(name) {
+  alert("Hi " + name);
 }
 
-myFoo2();
+// newGreet("a");
+// newGreet("b");
+// newGreet("c");
+// const users = ["Ali", "Tayyab", "Fareed"];
+// for (let i = 0; i < users.length; i++) {
+//   const user = users[i];
+//   newGreet(user);
+// }
+
+// const isCondition = true;
+// function newGreet2() {
+//   if (true) {
+//     var abcdef = "1";
+//     let abcdefgh = "1";
+//     console.log(abcdefgh, "inside inside");
+//   }
+//   console.log(abcdefgh, "inside");
+//   console.log(abcdef, "inside");
+// }
+
+// newGreet2();
+
+// const day = "fri";
+// switch (day) {
+//   case "mon":
+//     alert("Waking up at 7");
+//     break;
+
+//   case "wed":
+//     alert("Waking up at 8");
+//     break;
+
+//   case "fri":
+//     alert("Waking up at 9");
+//     break;
+
+//   default:
+//     alert("Keep sleeping");
+// }
