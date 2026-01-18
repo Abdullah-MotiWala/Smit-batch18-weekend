@@ -6,11 +6,13 @@
   display: none !important;
 }
 
-#teams-wrapper > div {
+#teams-wrapper > div,
+#elected-wrapper > div   {
   display: flex;
   justify-content: space-around;
 }
-.team {
+.team,
+.side {
   height: 250px;
   width: 250px;
   background-color: yellow;
