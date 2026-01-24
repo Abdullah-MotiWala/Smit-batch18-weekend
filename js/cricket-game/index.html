@@ -11,11 +11,11 @@
 <body>
 
     <!-- Name Input -->
-    <!-- <div class="name-wrapper" id="name-wrapper">
+    <div class="name-wrapper" id="name-wrapper">
         <input type="text" placeholder="Enter Your Name" name="name" id="name">
 
         <button id="next">Next</button>
-    </div> -->
+    </div>
 
     <!-- Team Selection -->
     <div id="teams-wrapper" class="hide">
@@ -31,7 +31,7 @@
     </div>
 
     <!-- Toss -->
-    <div id="toss-wrapper" class="show">
+    <div id="toss-wrapper" class="hide">
         <div id="toss-coins">
             <div class="toss" id="hd">Heads</div>
             <div class="toss" id="tl">Tails</div>
@@ -49,9 +49,11 @@
     </div>
 
     <!-- Play Screen -->
-    <div id="play-wrapper" class="hide"  tabindex="0">
+    <div id="play-wrapper" class="hide" tabindex="0">
+        <h1><span>You're</span> <span id="play-type">-</span> <span>ing</span></h1>
         <span>Score: </span><span id="score">0</span>
         <span>Wickets: </span><span id="wickets">0</span>
+        <span>Target: </span><span id="target">N/A</span>
 
         <div id="user-side"></div>
         <div id="play-type"></div>

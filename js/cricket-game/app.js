@@ -1,6 +1,18 @@
 const tossSides = ["hd", "tl"];
 const choices = ["bat", "bowl"];
-const playItems = ["score", "wicket", "extras"];
+const playItems = [
+  "score",
+  "extras",
+  "score",
+  "score",
+  "score",
+  "wicket",
+  "score",
+  "extras",
+  "score",
+  "score",
+  "score",
+];
 
 const playItemDetails = {
   score: [0, 1, 2, 3, 4, 6],
@@ -8,12 +20,14 @@ const playItemDetails = {
   extras: ["wide", "no ball", "bye", "leg bye"],
 };
 
-playItemDetails[playItems[0]];
-
 let playerName = null;
 let teamId = null;
 let isTossWon = null;
 let userPlaying = null;
+let wickets = 0;
+let score = 0;
+let target = 0;
+let lastPlayerScore = 0;
 
 const nameWrapper = document.getElementById("name-wrapper");
 const teamWrapper = document.getElementById("teams-wrapper");
@@ -27,6 +41,11 @@ const teamNextButton = teamWrapper?.querySelector("#next");
 const tossNextButton = tossWrapper?.querySelector("#next");
 const electedNextButton = electedWrapper?.querySelector("#next");
 const playClickButton = playWrapper?.querySelector("#play");
+
+const wicketSpan = playWrapper?.querySelector("#wickets");
+const scoreSpan = playWrapper?.querySelector("#score");
+const playTypeSpan = playWrapper?.querySelector("#play-type");
+const targetSpan = playWrapper?.querySelector("#target");
 
 function getPlayerName() {
   const nameInput = nameWrapper.querySelector("#name");
@@ -101,6 +120,7 @@ function tossNextClickHanlder() {
     } else {
       userPlaying = "bat";
     }
+    playTypeSpan.innerText = userPlaying;
     alert(
       `Computer has elected to ${computerChoice} first. You will ${userPlaying} first.`,
     );
@@ -115,6 +135,7 @@ function electedClickHandler(event) {
   const choice = event.target;
   const choiceId = choice.id;
   userPlaying = choiceId;
+  playTypeSpan.innerText = userPlaying;
 }
 const electingChoices = electedWrapper.getElementsByClassName("side");
 for (let i = 0; i < electingChoices.length; i++) {
@@ -131,18 +152,111 @@ electedNextButton?.addEventListener("click", electedNextClickHanlder);
 
 // Play
 function playClickHandler(event) {
-  const isSpaceClicked = event.code === "Space";
-  if (!isSpaceClicked) return;
+  if (!checkIfSpaceClick(event)) return;
 
-  const playItemType = Math.floor(Math.random() * 3);
-  const playItem = playItems[playItemType];
-  console.log(playItem, "===playItem");
+  const category = getCategory();
+  const playItem = getSubCategory(category);
 
-  const playItemDetail = playItemDetails[playItem];
+  switch (category) {
+    case "score":
+      updateScore(playItem, false);
+      break;
+
+    case "wicket":
+      updateWickets(playItem);
+      break;
+
+    case "extras":
+      updateScore(category, true);
+      break;
+  }
+
+  if (wickets === 10) {
+    stopInnings();
+  }
+
+  if (score >= target && target) {
+    stopInnings();
+  }
 }
 
-playClickButton.addEventListener("click", function () {
+playClickButton.addEventListener("click", hanldePlayClickBtn);
+
+function hanldePlayClickBtn() {
   document.addEventListener("keydown", playClickHandler);
   alert("Press Spacebar to play the balls");
   playClickButton.remove();
-});
+}
+
+function updateWickets(wicketType) {
+  alert(`Oooo, ${wicketType}`);
+  wicketSpan.innerText = ++wickets;
+  lastPlayerScore = 0;
+}
+
+function updateScore(currentScore, isExtra) {
+  if (isExtra) {
+    alert(`Yoyy, ${currentScore}`);
+    score += 1;
+  } else {
+    alert(`Yoyy, ${currentScore}`);
+    score += currentScore;
+    lastPlayerScore += currentScore;
+  }
+
+  scoreSpan.innerText = score;
+  if (lastPlayerScore >= 50) {
+    alert("You've scored Fiftyyy");
+  }
+}
+
+function checkIfSpaceClick(event) {
+  const isSpaceClicked = event.code === "Space";
+  return isSpaceClicked;
+}
+
+function getCategory() {
+  const playItemType = Math.floor(Math.random() * playItems.length);
+  const playItemCategory = playItems[playItemType];
+
+  return playItemCategory;
+}
+
+function getSubCategory(category) {
+  const playItemSubCategory = playItemDetails[category];
+  const randomIndexOfSubCategory = Math.floor(
+    Math.random() * playItemSubCategory.length,
+  );
+  const item = playItemSubCategory[randomIndexOfSubCategory];
+  return item;
+}
+
+function stopInnings() {
+  const isFirstInnings = !target;
+  if (isFirstInnings) stopFirstInnings();
+  else stopSecondInnings();
+}
+
+function stopFirstInnings() {
+  alert("Innings End");
+  target = score + 1;
+  score = 0;
+  wickets = 0;
+  scoreSpan.innerText = score;
+  wicketSpan.innerText = wickets;
+  targetSpan.innerText = target;
+  if (userPlaying === "bat") {
+    userPlaying = "bowl";
+  } else {
+    userPlaying = "bat";
+  }
+  playTypeSpan.innerText = userPlaying;
+}
+
+function stopSecondInnings() {
+  if (userPlaying === "bat") {
+    alert("Inning Completed, You won");
+  } else {
+    alert("Inning Finished, You Lost");
+  }
+}
