@@ -917,3 +917,8 @@ function newGreet(name) {
 //   default:
 //     alert("Keep sleeping");
 // }
+
+// alert("Hi I'm alert")
+console.log(location, "===location");
+
+// debugger;
