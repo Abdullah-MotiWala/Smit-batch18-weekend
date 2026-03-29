@@ -34,13 +34,13 @@
 // var a = 2 //re initialize
 // a = 3 // new assignement
 
-var a = 4;
-a = 5;
+// var a = 4;
+// a = 5;
 
 var greetings = "Hello, How're you?";
 // alert(greetings);
 
-var a = 1 + 1;
+// var a = 1 + 1;
 // alert(a);
 var b = 2 - 1;
 var c = 2 * 2;
@@ -872,7 +872,7 @@ function multiplicate(value1, value2) {
 // }
 
 // myFoo2();
-alert("abc");
+// alert("abc");
 
 function newGreet(name) {
   alert("Hi " + name);
@@ -919,6 +919,497 @@ function newGreet(name) {
 // }
 
 // alert("Hi I'm alert")
-console.log(location, "===location");
+// console.log(location, "===location");
 
 // debugger;
+// console.log(a, "===a");
+// let a = 1;
+
+// myFoo23()
+// var myFoo23 = () => {
+//   console.log("runnin");
+// };
+// function myFoo(){
+//   console.log("===running")
+// }
+
+// const myLocation = window.location
+// console.log(myLocation)
+
+// const myArr = ["a", "b"];
+// myArr.push("c", "d", "e", "f");
+// console.log(myArr);
+
+// function myFoo(a, b, ...c) {
+//   console.log(a, b, c);
+// }
+// myFoo("a", "b", "c", "d", "e", "f", "g");
+const myArr1 = ["a", "b", "c"];
+const myArr2 = ["d", "e", "f"];
+
+const myArr3 = [...myArr1, myArr2];
+console.log(myArr3);
+
+const myObj1 = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+const myObj2 = {
+  e: 1,
+  f: 2,
+  g: 3,
+  a: 4,
+};
+
+const myObj3 = {
+  ...myObj2,
+  ...myObj1,
+};
+console.log(myObj3);
+
+const student = {
+  name: "Ali",
+  age: 25,
+  qualification: "Matric",
+};
+
+// const {
+//   name,
+//   age:sAge,
+//   qualification,
+// } = student;
+
+// const studentName = student.name
+// const studentAge = student.age
+// const studentQualification = student.qualification
+
+// console.log(name, sAge, qualification);
+
+// const studentsNew = ["Ali", "Bashir", "Usman"];
+// const [firstStudent,_,secondStudent] = studentsName
+
+// function myFoo(b,a=1) {
+//   // if(a === undefined){
+//   //   a = 1
+//   // }
+//   console.log(a);
+// }
+// myFoo(6);
+
+// function parent(cb) {
+//   setTimeout(() => {
+//     let a = 1 + 1;
+//     console.log("===parent run");
+//     cb()
+//   }, 3000);
+// }
+
+// parent(function () {
+//   console.log("===callback run");
+// });
+
+// function getIngredients(cb) {
+//   setTimeout(() => {
+//     console.log("Ingredients ready");
+//     cb(["tomatoes", "onions", "spices"]);
+//   }, 1000);
+// }
+
+// function chopIngredients(ingredients, callback) {
+//   setTimeout(() => {
+//     console.log("Ingredients chopped:", ingredients);
+//     callback("chopped ingredients");
+//   }, 1000);
+// }
+
+// function cook(choppedIngredients, callback) {
+//   setTimeout(() => {
+//     console.log("Cooking:", choppedIngredients);
+//     callback("cooked meal");
+//   }, 1000);
+// }
+
+// function plate(meal, callback) {
+//   setTimeout(() => {
+//     console.log("Plating:", meal);
+//     callback("plated dish");
+//   }, 1000);
+// }
+
+// function serve(dish, callback) {
+//   setTimeout(() => {
+//     console.log("Serving:", dish);
+//     callback("served to customer");
+//   }, 1000);
+// }
+
+// // Callback Hell 😬
+// getIngredients((err, ingredients) => {
+//   if (err) return console.error(err);
+
+//   chopIngredients(ingredients, (err, chopped) => {
+//     if (err) return console.error(err);
+
+//     cook(chopped, (err, cookedMeal) => {
+//       if (err) return console.error(err);
+
+//       plate(cookedMeal, (err, platedDish) => {
+//         if (err) return console.error(err);
+
+//         serve(platedDish, (err, result) => {
+//           if (err) return console.error(err);
+
+//           console.log("Done:", result);
+//         });
+//       });
+//     });
+//   });
+// });
+
+// getIngredients(function (ingredients) {
+//   chopIngredients(ingredients, function (chopIngredients) {
+//     cook(chopIngredients, function (cooked) {
+//       plate(cooked, function (platedMeal) {
+//         serve(platedMeal, function () {
+//           alert("Order completed");
+//         });
+//       });
+//     });
+//   });
+// });
+
+// const promise = new Promise(function (resolve, reject) {
+//   setTimeout(function () {
+//     reject("Data");
+//   }, 3000);
+// });
+
+// promise
+//   .then(function (data) {
+//     console.log(data);
+//   })
+//   .catch(function (err) {
+//     console.log(err,"===catch");
+//   });
+
+// console.log(promise, "===promise");
+
+function getIngredients() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Ingredients ready");
+      resolve(["tomatoes", "onions", "spices"]);
+    }, 1000);
+  });
+}
+
+function chopIngredients(ingredients) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Ingredients chopped:", ingredients);
+      resolve("chopped ingredients");
+    }, 1000);
+  });
+}
+
+function cook(choppedIngredients) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Cooking:", choppedIngredients);
+      resolve("cooked meal");
+    }, 1000);
+  });
+}
+
+function plate(meal) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Plating:", meal);
+      resolve("plated dish");
+    }, 1000);
+  });
+}
+
+function serve(dish) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Serving:", dish);
+      resolve("served to customer");
+    }, 1000);
+  });
+}
+
+// getIngredients()
+//   .then(chopIngredients)
+//   .then(cook)
+//   .then(plate)
+//   .then(serve)
+//   .then((result) => {
+//     console.log("Done:", result);
+//   })
+//   .catch((err) => {
+//     console.error("Error:", err);
+//   });
+
+// console.log("===run")
+
+// 🧑‍🍳 Main async function
+// async function makeDish() {
+//   try{
+
+//     const ingredients = await getIngredients();
+//     const chopped = await chopIngredients(ingredients);
+//     const cooked = await cook(chopped);
+//     const plated = await plate(cooked);
+//     const result = await serve(plated);
+
+//     console.log("Done:", result);
+//   }catch(){
+
+//   }
+// }
+
+// // Run it
+// makeDish();
+
+// function chopVegetables() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       console.log("Vegetables chopped");
+//       resolve("chopped veggies");
+//     }, 1000);
+//   });
+// }
+
+// function prepareSauce() {
+//   return new Promise((resolve,reject) => {
+//     setTimeout(() => {
+//       console.log("Sauce ready");
+//       reject("sauce");
+//     }, 1000);
+//   });
+// }
+
+// async function makeDish() {
+//   try {
+//     const results= await Promise.allSettled([
+//       chopVegetables(),
+//       prepareSauce(),
+//     ]);
+
+//     console.log(results)
+//     // console.log("Using:", veggies, "and", sauce);
+//     console.log("Dish ready!");
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }
+
+// makeDish();
+
+function chefCounter() {
+  let count = 0;
+
+  function update() {
+    count++;
+    console.log("Dishes made:", count);
+  }
+
+  return update;
+}
+
+// const cook = chefCounter();
+
+// cook();
+// cook();
+// cook();
+
+// let count = 0;
+// function chefCounter() {
+//   count++;
+// }
+
+// chefCounter();
+// chefCounter();
+// chefCounter();
+// chefCounter();
+// chefCounter();
+
+const myArray = ["a", "b", "c", "d"];
+// for (let ele of myArray) {
+//   console.log(ele, "===ele");
+// }
+
+// myArray.forEach((ele) => {
+//   console.log(ele, "===e");
+// });
+
+const result2 = myArray.map((ele) => {
+  console.log(ele, "===ele");
+  const newEle = (ele += "abc");
+  return newEle;
+});
+
+console.log(myArray, result2);
+
+class Student {
+  #password = "abc";
+  age = 25;
+  #name = "Ali";
+  // constructor() {}
+  getDetails() {
+    return {
+      name: this.#name,
+      age: this.age,
+    };
+  }
+  updateDetails(name, age, password) {
+    this.age = age;
+    this.#name = name;
+    this.#password = password;
+  }
+}
+
+const student1 = new Student(); //instantiate
+const student2 = new Student();
+console.log(student1);
+
+// student1.updateDetails("Abdullah", 15);
+
+// console.log(student1.getDetails(), student2.getDetails());
+
+// console.log(student1.getDetails(), "===student1");
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(this.name + " makes a sound");
+  }
+  eat() {
+    console.log(this.name + " eat the food");
+  }
+}
+
+// const animal = new Animal("Dog");
+// console.log(animal.eat());
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+
+  eat() {
+    console.log(this.name + " eat the food");
+  }
+
+  speak() {
+    console.log(this.name + " barks");
+  }
+
+  showBreed() {
+    console.log("Breed:", this.breed);
+  }
+}
+
+const dog = new Dog("Buddy", "Labrador");
+const dog2 = new Dog("Buddy", "Rottwiller");
+
+// d.speak(); // Buddy barks
+dog.showBreed(); // Breed: Labrador
+dog2.showBreed(); // Breed: Labrador
+dog.speak();
+
+// const myMap = new Map();
+
+// const key1 = { id: 1 };
+// const key2 = { id: 2 };
+
+// // Set values
+// myMap.set(key1, "Value for key1");
+// myMap.set(key2, "Value for key2");
+
+// // Get values
+// console.log(myMap.get(key1)); // "Value for key1"
+// console.log(myMap.get(key2)); // "Value for key2"
+// console.log(myMap)
+
+const myArr = [1, 2, 2, 3];
+const mySet = [...new Set(myArr)];
+
+// mySet.add(1);
+// mySet.add(2);
+// mySet.add(2);
+// mySet.add(3);
+
+// console.log(mySet);
+
+// const numbers = [1, 2, 3, 4, 5];
+// const evens = numbers.filter(function (e, ind, arr) {
+//   // console.log(e, ind, arr, "===e");
+//   return e % 2 === 0;
+// });
+// console.log(evens); // [2, 4]
+
+// function filter(cb) {
+//   const filteredArray = [];
+//   for (let i = 0; i < this.array.length; i++) {
+//     const result = cb();
+//     if (result) filteredArray.push(this.array[i]);
+//   }
+
+//   return filteredArray;
+// }
+
+// const numbers = ["a", "b", "c", "d"];
+// const sum = numbers.reduce((acc, curr, ind) => {
+//   console.log(acc, curr, ind);
+//   return acc + curr;
+// },"_");
+// console.log(sum); // 10
+
+// const users = [
+//   { name: "Ali", age: 25 },
+//   { name: "Sara", age: 30 }
+// ];
+
+// const user = users.find(u => u.age > 26);
+// console.log(user); // { name: 'Sara', age: 30 }
+
+// const index = users.findIndex(u => u.name === "Ali");
+// console.log(index); // 0
+
+const nested = [1, [2, 3], [4, [5, [6]]]];
+const flated = nested.flat();
+console.log(flated);
+
+const words = ["hello world", "foo bar"];
+
+const result1 = words.flatMap((w) => w.split(" "));
+console.log(result1); // ["hello", "world", "foo", "bar"]
+
+function greet(greeting, punctuation) {
+  console.log(this, "===this");
+  console.log(`${greeting}, ${this.name}${punctuation}`);
+}
+
+// greet()
+
+const person = { name: "Ali" };
+
+// greet.call(person, "Hello", "!"); // Hello, Ali!
+const newFoo = greet.bind(person, "Hello", "!"); // Hello, Ali!
+// greet.apply(person, ["Hello", "!"]); // Hello, Ali!
+
+newFoo();
+const myArr12 = [0,1, 2, 3];
+function myFun1(ind,arr) {
+  return myArr12[ind];
+}
+
+myFun1(1,myArr12)

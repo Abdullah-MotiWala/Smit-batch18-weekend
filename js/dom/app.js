@@ -37,3 +37,7 @@ function linkClick() {
 // }
 
 // dummyParent("abc", dummyCallback);
+
+function myFun1(ind,arr) {
+  return arr[ind];
+}
