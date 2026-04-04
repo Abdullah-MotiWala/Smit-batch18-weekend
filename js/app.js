@@ -1407,9 +1407,67 @@ const newFoo = greet.bind(person, "Hello", "!"); // Hello, Ali!
 // greet.apply(person, ["Hello", "!"]); // Hello, Ali!
 
 newFoo();
-const myArr12 = [0,1, 2, 3];
-function myFun1(ind,arr) {
+const myArr12 = [0, 1, 2, 3];
+function myFun1(ind, arr) {
   return myArr12[ind];
 }
 
-myFun1(1,myArr12)
+myFun1(1, myArr12);
+
+const myCollection = ["apple", "banana", "cherry"];
+
+// const iterator = myCollection[Symbol.iterator]();
+
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+// console.log(iterator.next());
+
+// for (let ele of myCollection) {
+//   console.log(ele);
+// }
+
+// myFoo();
+
+// function myFoo() {
+//   console.log("Running");
+// }
+// debugger;
+// console.log(ab);
+// var ab = 1;
+
+// console.log(myFoo3());
+// myFoo3()
+// var myFoo3 = function(){
+//   console.log("runnning")
+// }
+// debugger;
+// console.log(a);
+// const a = ()=>{};
+
+// console.clear()
+
+// function abc(){
+//   let a = 1;
+//   debugger;
+// }
+
+// abc()
+// debugger;
+
+// console.log("Run B");
+setTimeout(() => {
+  console.log("Run A");
+}, 1000);
+// console.log("Run C");
+
+function abc() {
+  // for (let i = 1; i > 0; i++) {
+  //   console.log(i);
+  // }
+  function cde(){}
+  cde()
+}
+
+abc()
+abc()
