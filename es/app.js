@@ -495,3 +495,259 @@ console.log(currentCounter,"===current")
 
 
 // var a = 1
+
+let a = 1;
+
+// function cb(a) {
+//   alert(a);
+// }
+
+// setTimeout(function () {
+//   a = 2;
+//   cb(a);
+// }, 2000);
+
+// alert(a);
+
+function markOrderAsComplete(orderId) {
+  setTimeout(function () {
+    console.log("Marked order as complete", orderId);
+  }, 1000);
+}
+
+function dispatchOrder(orderId, cb) {
+  setTimeout(function () {
+    console.log("Dispatched order", orderId);
+    cb(orderId);
+  }, 1000);
+}
+
+function verifyOrder(orderId, cb) {
+  setTimeout(function () {
+    console.log("Verified order", orderId);
+    cb(orderId);
+  }, 1000);
+}
+
+function getOrderDetails(order, cb) {
+  setTimeout(function () {
+    console.log("Got order details from", order[0].orderId);
+    cb(order[0].orderId);
+    return { orderId: order.orderId, item: "Laptop" };
+  }, 1000);
+}
+
+function getUserOrders(user, cb) {
+  setTimeout(function () {
+    console.log("Got orders of ", user.name);
+    const orders = [{ orderId: 1 }, { orderId: 2 }];
+    cb(orders);
+    return orders;
+  }, 1000);
+}
+
+function getUser(userId, cb) {
+  setTimeout(function () {
+    console.log("Got user");
+    const user = { id: userId, name: "Alice" };
+    cb(user);
+    return user;
+  }, 1000);
+}
+
+// Callback Hell
+// getUser(1, function (user) {
+//   getUserOrders(user, function (orders) {
+//     getOrderDetails(orders, function (orderId) {
+//       verifyOrder(orderId, function (orderId) {
+//         dispatchOrder(orderId, markOrderAsComplete);
+//       });
+//     });
+//   });
+// });
+
+// function markOrderAsComplete(orderId) {
+//   return
+// }
+// const result = true;
+// const userPromise = new Promise(function (resolve, reject) {
+//   setTimeout(function () {
+//     if (result) resolve("Got user");
+//     else reject("Error while getting user");
+//     // console.log("Got user");
+//     // const user = { id: 1, name: "Alice" };
+//     // resolve(user);
+//   }, 1000);
+// });
+// console.log(userPromise, "===initial State");
+// userPromise
+//   .then(function (val) {
+//     // console.log(val, "===resolve hogya");
+
+//   })
+//   .catch(function (err) {
+//     console.log(err, "===reject hogya");
+//   });
+
+// console.log("agay wali line");
+// console.log(userPromise)
+
+// const res = userPromise.then((val) => {
+//   console.log(val);
+//   return val;
+// });
+// console.log(res);
+
+// console.log("===agay chl rha");
+
+// function markOrderAsComplete(orderId) {
+//   return new Promise(function (resolve) {
+//     setTimeout(function () {
+//       console.log("Marked order as complete", orderId);
+//       resolve(orderId);
+//     }, 1000);
+//   });
+// }
+
+// function bye(orderId) {
+//   return new Promise(function (resolve) {
+//     setTimeout(function () {
+//       console.log("Marked order as complete", orderId);
+//       resolve(orderId);
+//     }, 1000);
+//   });
+// }
+
+// const result = markOrderAsComplete(1);
+// result.then(function (val) {
+//   console.log(val, "===resolve hogya");
+//   bye(val).then;
+// });
+
+// async function processOrder() {
+//   const result = await markOrderAsComplete(1);
+//   console.log(result);
+//   console.log("===next line")
+// }
+
+// processOrder()
+
+// function myFoo() {
+//   return function myFoo2() {
+//     console.log("===running");
+//   };
+// }
+
+// function parent() {
+//   let a = 1;
+
+//   function child() {
+//     console.log(a);
+//   }
+
+//   return child;
+// }
+
+// const child = parent();
+// child();
+
+let counter = 3;
+function life() {
+  counter--;
+  // function missed() {
+  //   counter--;
+  //   console.log(counter)
+  //   return counter;
+  // }
+  return counter;
+}
+
+const missCounter = life();
+// let counterValue = missCounter();
+
+// let counter = 0;
+// function incrementCounter() {
+//   counter++;
+//   console.log(counter);
+// }
+
+// function lifespan() {
+//   let counter = 3;
+
+//   function missed() {
+//     counter--;
+//     return counter;
+//   }
+
+//   return missed;
+// }
+
+// const missCounter1 = lifespan();
+
+function getUser(userId) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Got user");
+      resolve({ id: userId, name: "Alice" });
+    }, 1000);
+  });
+}
+
+function getOrders(user) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Got orders");
+      resolve([{ orderId: 1 }, { orderId: 2 }]);
+    }, 1000);
+  });
+}
+
+function getOrderDetails(order) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Got order details");
+      resolve({ orderId: order.orderId, item: "Laptop" });
+    }, 1000);
+  });
+}
+
+const user = getUser(1);
+user
+  .then((user) => {
+    getOrders(user).then((orders) => {
+      getOrderDetails(orders[0]).then((orderDetails) => {
+        console.log(orderDetails);
+      });
+    });
+  })
+  .catch((err) => {
+    console.log(err, "===reject hogya");
+  });
+
+let counterTest = 0;
+function updateCounter() {
+  counterTest++;
+}
+
+console.log(counterTest,"===iniital value");
+updateCounter();
+updateCounter();
+console.log(counterTest, "===after value");
+
+
+function counterParent(){
+  let counter = 0;
+
+  return function updateCounter(){
+    counter++;
+    return counter;
+  }
+}
+debugger
+const updateCounterFun = counterParent()
+
+let currentCounter = updateCounterFun()
+console.log(currentCounter,"===current")
+
+// var a = 1;
+
