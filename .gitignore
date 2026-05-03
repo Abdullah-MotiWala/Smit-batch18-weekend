@@ -1,1 +1,3 @@
 .claude
+backend/express/node_modules
+backend/express/package-lock.json
