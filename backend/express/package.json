@@ -12,6 +12,8 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "express": "5.2.1"
+    "body-parser": "2.2.2",
+    "express": "5.2.1",
+    "mongodb": "^7.2.0"
   }
 }
